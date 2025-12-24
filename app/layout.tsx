@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "../components/Navbar";
 import { AnimationProvider } from "@/app/providers/AnimationProvider";
+import Head from "next/head";
 
 import "./globals.css";
 
@@ -16,8 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio MGDev",
-  description: "Galeri proyek dan pencapaian MGDev",
+  title: "MGDev",
+  description: "Portfolio",
+   icons: {
+    icon: "/icontab.png", 
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +34,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         <AnimationProvider>
+        <AnimationProvider>
         <Navbar />
         {children}
         </AnimationProvider>

@@ -17,7 +17,7 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
           {/* LEFT */}
-          <div>
+          <div className="text-center md:text-left">
             <p
               className={`text-sm uppercase tracking-widest text-gray-500 mb-4 ${hoverBlur}`}
             >
@@ -31,7 +31,7 @@ export default function ContactSection() {
             </h2>
 
             <p
-              className={`text-gray-600 max-w-sm mb-10 leading-relaxed ${hoverBlur}`}
+              className={`text-gray-600 max-w-sm mb-10 leading-relaxed mx-auto md:mx-0 ${hoverBlur}`}
             >
               If you have any questions or inquiries, please don&apos;t hesitate
               to contact me.
@@ -39,7 +39,7 @@ export default function ContactSection() {
 
             <div className="space-y-5 text-gray-600">
 
-              <div className={`flex items-center gap-4 ${hoverBlur}`}>
+              <div className={`flex items-center justify-center md:justify-start gap-4 ${hoverBlur}`}>
                 <HiMail className="text-xl" />
                 <a
                   href="mailto:gibranhakim127@gmail.com"
@@ -49,7 +49,7 @@ export default function ContactSection() {
                 </a>
               </div>
 
-              <div className={`flex items-center gap-4 ${hoverBlur}`}>
+              <div className={`flex items-center justify-center md:justify-start gap-4 ${hoverBlur}`}>
                 <SiInstagram className="text-xl" />
                 <a
                   href="https://instagram.com/giigibran"
@@ -60,7 +60,7 @@ export default function ContactSection() {
                 </a>
               </div>
 
-              <div className={`flex items-center gap-4 ${hoverBlur}`}>
+              <div className={`flex items-center justify-center md:justify-start gap-4 ${hoverBlur}`}>
                 <HiLocationMarker className="text-xl" />
                 <span>Tangerang, Banten, Indonesia</span>
               </div>
@@ -69,8 +69,8 @@ export default function ContactSection() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center md:justify-end">
-           <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden">
+          <div className="hidden md:flex justify-end">
+            <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden">
               <Image
                 src="/contactlogo.png"
                 alt="Contact visual"

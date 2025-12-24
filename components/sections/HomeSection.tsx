@@ -36,19 +36,16 @@ export default function HomeSection() {
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
       <div className="w-full max-w-7xl mx-auto px-8 md:px-16">
-        <div className="grid md:grid-cols-2 items-center gap-20">
+        {/* flex-col-reverse untuk mobile agar gambar di atas */}
+        <div className="flex flex-col-reverse md:flex-row items-center gap-20">
 
           {/* LEFT CONTENT */}
-          <div>
-            <h1
-              className={`text-5xl md:text-7xl font-bold mb-6 ${hoverBlur}`}
-            >
+          <div className="flex-1">
+            <h1 className={`text-5xl md:text-7xl font-bold mb-6 ${hoverBlur}`}>
               Software Engineer
             </h1>
 
-            <p
-              className={`text-gray-600 max-w-xl mb-8 leading-relaxed ${hoverBlur}`}
-            >
+            <p className={`text-gray-600 max-w-xl mb-8 leading-relaxed ${hoverBlur}`}>
               I am Muhammad Gibran, an Informatics Engineering student who enjoys
               building web applications, backend systems, and UI
               experiences with clean and scalable code.
@@ -106,7 +103,7 @@ export default function HomeSection() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center md:justify-end">
+          <div className="flex-1 flex justify-center md:justify-end mb-12 md:mb-0">
             <div className="relative group">
               {/* spotlight */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/30 to-transparent opacity-0 group-hover:opacity-100 blur-3xl transition duration-500" />
